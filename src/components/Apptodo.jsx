@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { IoMdAddCircle } from "react-icons/io";
 function Apptodo({onNewItem}){
   const [todoName,setTodoName]=useState("");
   const [dueDate,setDueDate]=useState("");
@@ -16,7 +17,8 @@ function Apptodo({onNewItem}){
   <div className="row kg-row">
     <div className="col-6"><input type="text" value={dueDate} onChange={handleDateChange}placeholder="enter text"/></div>
     <div className="col-4"><input type="date" value={todoName} onChange={handleNameChange} /></div>
-    <div className="col-2"><button type="button" className="btn btn-success kg-button" onClick={handleAddButtonClicked}>add</button></div>
+    <div className="col-2"><button type="button" className="btn btn-success kg-button" onClick={handleAddButtonClicked}><IoMdAddCircle />
+</button></div>
   </div>
   </div>);
 }
