@@ -6,6 +6,7 @@ import Todoitems from './components/Todoitems';
 import './App.css';
 import WelcomeMessage from './components/WelcomeMessage';
 import { useState } from "react";
+import Footer from './Footer';
 function App() {
   
   const [todoItems, setTodoItems] = useState([]);
@@ -27,7 +28,7 @@ function App() {
     {todoItems.length===0&&<WelcomeMessage todoItems={todoItems}></WelcomeMessage>}
     <Todoitems todoItems={todoItems} onDelete = {handleDelete}></Todoitems>
 
-
+    <Footer></Footer>
 
   </center>
 }
